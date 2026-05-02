@@ -1,6 +1,6 @@
-# STAR LIKE API SRC UID PASSWORD 
-# POWERED BY : @STAR_GMR
-# CHANNEL : @STAR_METHODE
+# KHAN LIKE API SRC UID PASSWORD 
+# POWERED BY : @KHAN_GMR
+# CHANNEL : @KHAN_METHODE
 from flask import Flask, request, jsonify
 import asyncio
 from Crypto.Cipher import AES
@@ -262,7 +262,7 @@ def handle_requests():
     key = request.args.get("key")
     client_ip = request.remote_addr
 
-    if key != "STAR":
+    if key != "KHAN":
         return jsonify({"error": "Invalid or missing API key 🔑"}), 403
 
     if not uid or not server_name:
@@ -364,12 +364,12 @@ def handle_requests():
 def reset_cache():
     """Reset liked cache (use carefully)"""
     key = request.args.get("key")
-    if key != "STAR":
+    if key != "KHAN":
         return jsonify({"error": "Invalid key"}), 403
     
     global liked_cache
     liked_cache.clear()
-    return jsonify({"message": "Cache cleared", "credit": "@STAR_GMR"})
+    return jsonify({"message": "Cache cleared", "credit": "@KHAN_GMR"})
 
 if __name__ == '__main__':
     print("🚀 Server started - Smart Like System!")
@@ -380,7 +380,7 @@ if __name__ == '__main__':
     print("🧠 Smart feature: Tracks which accounts already liked")
     print("⚡ Only fresh accounts will send likes")
     app.run(host='0.0.0.0', port=5001, debug=True, use_reloader=False)
-# STAR LIKE API SRC UID PASSWORD 
-# POWERED BY : @STAR_GMR
-# CHANNEL : @STAR_METHODE
+# KHAN LIKE API SRC UID PASSWORD 
+# POWERED BY : @KHAN_GMR
+# CHANNEL : @KHAN_METHODE
 
